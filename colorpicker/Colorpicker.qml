@@ -71,7 +71,6 @@ Rectangle {
 
                 hueColor: {
                     var v = 1.0-hueSlider.value
-                    console.debug("v:"+v)
 
                     if(0.0 <= v && v < 0.16) {
                         return Qt.rgba(1.0, 0.0, v/0.16, 1.0)
@@ -268,8 +267,6 @@ Rectangle {
 
         // color object
         var c = Qt.tint(color, "transparent")
-
-        console.debug('set_color is called with:'+c)
 
         // set alpha
         alphaSlider.setValue(c.a)
